@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Deployed on Vercel
+
+https://sentient-front-minyoung.vercel.app/
 
 ## Getting Started
 
@@ -43,7 +45,3 @@ src
 │   ├── db.ts (idb)
 │   └── dummyQna.tsx (hard-coded QnA)
 ```
-
-## Deployed on Vercel
-
-https://
