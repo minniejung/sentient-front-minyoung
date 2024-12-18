@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--background: #ffffff;
+	--foreground: #212222;
+}
+
+body {
+	color: var(--foreground);
+	background: var(--background);
+	font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+textarea {
+	resize: none;
+	white-space: nowrap;
+	border: none;
+	outline: none;
+	font-weight: 600;
+}
+
+textarea::placeholder {
+	color: #808080;
+}
+
+.flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-between {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.answer-style {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	line-height: 1.5rem;
+
+	ul {
+		list-style: disc;
+		padding-left: 1.5rem;
+	}
+	li {
+		padding-left: 0.3rem;
+		line-height: 2rem;
+	}
+}
+
+.gradient-text-loading {
+	background: linear-gradient(to right, #000000, #848888, #000000);
+	background-size: 300% 100%;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	color: transparent;
+	animation: gradient-slide 3.5s linear infinite;
+}
+
+@keyframes gradient-slide {
+	0% {
+		background-position: 200% 0%;
+	}
+	100% {
+		background-position: -200% 0%;
+	}
+}
