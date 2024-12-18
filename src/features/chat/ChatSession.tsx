@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 import { useAtom } from 'jotai'
 
@@ -27,7 +27,7 @@ const ChatSession: React.FC = () => {
 
 	const [currentAnswer, setCurrentAnswer] = useState<string>('')
 
-	// const bottomRef = useRef<HTMLDivElement>(null)
+	const bottomRef = useRef<HTMLDivElement>(null)
 
 	const updateLastChat = (newData: Partial<ChatMessage>) => {
 		setSession(prev => ({
@@ -112,14 +112,14 @@ const ChatSession: React.FC = () => {
 		if (session.chats.length > 0) saveSession(session)
 	}, [session])
 
-	// useEffect(() => {
-	// 	if (bottomRef.current) bottomRef.current.scrollIntoView({ behavior: 'smooth' })
-	// }, [session.chats, currentAnswer])
+	useEffect(() => {
+		if (bottomRef.current) bottomRef.current.scrollIntoView({ behavior: 'smooth' })
+	}, [session.chats, currentAnswer])
 
 	return (
 		<>
 			<div className='relative flex h-full w-full max-w-[800px] flex-col md:my-0 md:pt-0'>
-				<div className='mb-32 h-full space-y-4 overflow-y-auto md:mt-0 md:h-full'>
+				<div className='mb-32 h-full space-y-4 overflow-y-auto md:mb-4 md:mt-0'>
 					{session.chats.map((chat, index) => (
 						<div key={index} className='flex flex-col space-y-2'>
 							<div className='traking-[-0.32px] min-h-[50px] rounded-b-[20px] border border-stroke p-4 text-[16px] font-medium leading-[24px]'>
@@ -142,7 +142,7 @@ const ChatSession: React.FC = () => {
 										</div>
 									)}
 								</>
-								{/* <div ref={bottomRef} /> */}
+								<div ref={bottomRef} />
 							</div>
 						</div>
 					))}
