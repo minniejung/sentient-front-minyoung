@@ -25,7 +25,7 @@ export const ButtonText = ({
 			onClick={onClick}
 			disabled={disabled}
 			className={cn(
-				'rounded-lg border border-stroke py-2 text-sm font-semibold leading-[155%] tracking-[-0.215px] text-gray-80 transition-all duration-200',
+				'rounded-lg border border-stroke py-2 text-sm font-semibold leading-[155%] tracking-[-0.215px] text-gray-80 transition-all duration-200 xs:px-4',
 				variantStyles[variant],
 				className,
 				disabled ? 'cursor-not-allowed opacity-50' : '',

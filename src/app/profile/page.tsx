@@ -10,7 +10,7 @@ const ProfilePage = () => {
 		<PageLayout>
 			<div className='flex h-full w-full flex-col items-start gap-6 overflow-y-auto md:py-6'>
 				<div className='flex w-full flex-row gap-3 border-b p-4'>
-					<h1 className='text-2xl font-bold'>Profile</h1>
+					<h1 className='text-xl font-bold'>Profile</h1>
 				</div>
 
 				<div className='flex items-center space-x-6 px-4'>
@@ -27,7 +27,7 @@ const ProfilePage = () => {
 					</div>
 				</div>
 
-				<div className='w-full px-4'>
+				<div className='w-full px-4 pb-20'>
 					<h2 className='my-4 font-semibold'>Our Plan</h2>
 
 					<div className='grid grid-cols-1 gap-4 md:grid-cols-2'>
@@ -69,13 +69,13 @@ const PlanCard = ({ title, description, features, price, selected = false }: Pla
 			selected ? 'border-secondary' : 'border-stroke',
 		)}>
 		{selected && (
-			<div className='bg-gray-f6 border-gray-eb absolute right-4 top-3 w-fit rounded-lg px-2 py-1 text-xs'>current</div>
+			<div className='absolute right-4 top-3 w-fit rounded-lg border-gray-eb bg-gray-f6 px-2 py-1 text-xs'>current</div>
 		)}
 
 		<div>
 			<h3 className='text-lg font-bold'>{title}</h3>
-			<p className='text-gray-80 mt-2 text-sm'>{description}</p>
-			<ul className='text-gray-80 mt-4 space-y-2 text-sm'>
+			<p className='mt-2 text-sm text-gray-80'>{description}</p>
+			<ul className='mt-4 space-y-2 text-sm text-gray-80'>
 				{features.map((feature, index) => (
 					<li key={index}>✔ {feature}</li>
 				))}

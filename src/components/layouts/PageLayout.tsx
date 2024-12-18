@@ -10,8 +10,8 @@ export const PageLayout = ({ children }: { children: React.ReactNode }) => {
 	return (
 		<div
 			className={cn(
-				'flex h-full w-full max-w-[800px] flex-col items-center p-4 pb-24 pt-[68px] md:justify-center md:py-0',
-				path.includes('discover') || path.includes('profile') ? 'justify-center' : 'justify-end',
+				'flex h-full w-full max-w-[800px] flex-col items-center px-4 md:justify-center md:py-0',
+				path.includes('discover') || path.includes('profile') ? 'justify-center' : '',
 			)}>
 			{children}
 		</div>

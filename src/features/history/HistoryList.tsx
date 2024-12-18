@@ -70,7 +70,7 @@ export const HistoryList = () => {
 	}, [])
 
 	return (
-		<div className='flex h-full w-full flex-col items-start gap-4 md:py-6'>
+		<div className='flex h-full w-full flex-col items-start gap-4 overflow-y-auto md:py-6'>
 			<div className='flex w-full flex-row gap-3 border-b p-4'>
 				<h1 className='text-xl font-bold'>Chat History</h1>
 				{history.length > 0 && (
@@ -80,7 +80,7 @@ export const HistoryList = () => {
 				)}
 			</div>
 
-			<div className='w-full space-y-4 px-4 pb-28 text-sm text-gray-80 md:pb-10'>
+			<div className='w-full space-y-4 px-4 text-sm text-gray-80 md:pb-10'>
 				{isLoading ? (
 					<p className='px-2 italic'>Loading...</p>
 				) : history.length > 0 ? (

@@ -23,7 +23,7 @@ export const SideBar = () => {
 
 const MobileTopArea = () => {
 	return (
-		<div className='flex-between fixed top-0 z-10 border-b border-stroke bg-white p-4 md:hidden'>
+		<div className='flex-between fixed top-0 z-20 border-b border-stroke bg-white p-4 md:hidden'>
 			<ButtonNewChat />
 			<ProfileArea />
 		</div>
@@ -32,7 +32,7 @@ const MobileTopArea = () => {
 
 const MobileBottomNav = () => {
 	return (
-		<div className='bg-gray-f5 fixed bottom-0 z-10 flex h-[73px] w-full border-t border-stroke md:hidden'>
+		<div className='fixed bottom-0 z-20 flex h-[73px] w-full border-t border-stroke bg-gray-f5 md:hidden'>
 			<NavMenu className='flex w-full flex-row items-center justify-around' />
 		</div>
 	)
@@ -40,7 +40,7 @@ const MobileBottomNav = () => {
 
 const DesktopSideBar = () => {
 	return (
-		<div className='md:flex-between bg-gray-f5 fixed left-0 hidden h-screen min-w-[75px] max-w-[149.35px] flex-col border border-stroke py-5 md:flex'>
+		<div className='md:flex-between fixed left-0 hidden h-screen min-w-[75px] max-w-[149.35px] flex-col border border-stroke bg-gray-f5 py-5 md:flex'>
 			<Link href='/' className='flex-center md:mb-12 md:items-start'>
 				<Logo className='h-9 w-9' />
 			</Link>
